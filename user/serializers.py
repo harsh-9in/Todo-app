@@ -18,7 +18,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
         user = models.UserProfile.objects.create_user(
             first_name=validated_data['first_name'],
             last_name=validated_data['last_name'],
-            role=validated_data['roles'],
+            roles=validated_data['roles'],
             email=validated_data['email'],
             password=validated_data['password']
         )
