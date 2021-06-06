@@ -14,7 +14,6 @@ class UserProfileViewset(viewsets.ModelViewSet):
     serializer_class = serializers.UserProfileSerializer
     queryset = models.UserProfile.objects.all()
     authentication_classes = (JWTAuthentication,)
-    permission_classes = [IsAuthenticated,]
 
 
 class UserLogin(ObtainAuthToken):
